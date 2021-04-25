@@ -5,12 +5,12 @@ namespace Players
 {
     class PlayerController
     {
-        private List<Player> players = new List<Player>();
+        private List<Player> players = new List<Player>(); // Лист игроков
 
-        private GroupController group = new GroupController();
-        private string[] pl = new string[] {"Kelerus", "James"};
+        private GroupController group = new GroupController(); // Конструктор класса
+        private string[] pl = new string[] {"Kelerus", "James"}; // Для тестов
 
-
+        /// <summary>Обращение к конкретному игроку</summary>
         public List<Player> Players()
         {
             return players;
@@ -33,7 +33,9 @@ namespace Players
             }
             
         }
-
+        /// <summary>Добавить игрока</summary>
+        /// <param name="name">Имя игрока</param>
+        /// <param name="_group">Класс игрока</param>
         public void Add(string name, int _group)
         {
             if(CheckPlayer(name))
@@ -55,7 +57,8 @@ namespace Players
             }
             
         }
-
+        /// <summary>Удалить игрока</summary>
+        /// <param name="name">Имя игрока</param>
         public string Remove(string name)
         {
             foreach (var item in players)
@@ -69,7 +72,8 @@ namespace Players
             }
             throw new ArgumentException("Такого игрока нету для удаления", nameof(name));
         }
-
+        /// <summary>Проверка игрока на повторение имени</summary>
+        /// <param name="name">Имя игрока</param>
         public bool CheckPlayer(string name)
         {
             foreach (var item in players)

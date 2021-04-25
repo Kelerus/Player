@@ -5,9 +5,9 @@ namespace Players
 {
     class GroupController
     {
-        private List<Group> groups = new List<Group>();
+        private List<Group> groups = new List<Group>(); // лист с классами
 
-        private string[] gr = new string[] {"Помощь","Атака","Фланг","Танк"};
+        private string[] gr = new string[] {"Помощь","Атака","Фланг","Танк"}; // Классы по умолчанию для тестов
 
         public GroupController()
         {
@@ -16,12 +16,13 @@ namespace Players
                 groups.Add(new Group(item));
             }
         }
-
+        /// <summary>Обращение к конкретному классу</summary>
         public List<Group> Groups()
         {
             return groups;
         }
-
+        /// <summary>Добавление нового класса</summary>
+        /// <param name="name">Название класса</param>
         public void Add(string name) 
         {
             if(string.IsNullOrWhiteSpace(name))
@@ -35,7 +36,8 @@ namespace Players
             }
             groups.Add(new Group(name));
         }
-
+        /// <summary>Проверка на повторение класса</summary>
+        /// <param name="name">Название класса</param>
         public bool IsRepetGroup(string name)
         {
             foreach(var item in groups)
@@ -47,7 +49,8 @@ namespace Players
             }
             return false;
         }
-
+        /// <summary>Удаление класса</summary>
+        /// <param name="name">Название класса</param>
         public string Remove(string name)
         {
             foreach(var item in groups)
@@ -59,18 +62,6 @@ namespace Players
                 }
             }
             throw new ArgumentException("Нет такой группы для удаления");
-        }
-
-        public Group GetGroup(string name)
-        {
-            foreach(var item in groups)
-            {
-                if(item.Name.ToLower().TrimStart().TrimEnd() == name.ToLower().TrimStart().TrimEnd())
-                {
-                    return item;
-                }
-            }
-            throw new Exception("Такой группы не существует");
         }
     }
 }

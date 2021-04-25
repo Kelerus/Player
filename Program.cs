@@ -8,20 +8,22 @@ namespace Players
     {
         static void Main(string[] args)
         {
+            #region Конструкторы
             GroupController groups = new GroupController();
             PlayerController players = new PlayerController();
-            
+            #endregion
+
             Console.WriteLine("\n\nДобро пожаловать выберите действие\n\n");
             
-            bool programbool = true;
+            bool programbool = true; // переменная для остановки программы
 
             while(programbool)
             {
-                Menu(groups, players);
+                Menu(groups, players); // Запуск самой программы
                 Console.WriteLine("\n\nНажмите любую кнопку для продолжения...\n\n");
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Или пропишите \"exit\" чтобы выйти из программы");
-                string exit = Console.ReadLine();
+                string exit = Console.ReadLine(); // Проверка для выхода из программы
                 Console.ResetColor();
                 if(exit == "exit")
                 {
@@ -30,7 +32,9 @@ namespace Players
             }
 
         }
-
+        /// <summary>Меню программы</summary>
+        /// <param name="_group">Конструктор класса</param>
+        /// <param name="_players">Конструктор игроков</param>
         private static void Menu(GroupController _groups, PlayerController _players)
         {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -86,7 +90,8 @@ namespace Players
             
 
         }
-
+        /// <summary>Вывод в консоль название классов</summary>
+        /// <param name="controller">Конструктор класса</param>
         private static void PrintGroups(GroupController controller)
         {
             foreach (var item in controller.Groups())
@@ -94,7 +99,8 @@ namespace Players
                 Console.WriteLine($"Название класса: {item.Name}");
             }
         }
-        
+        /// <summary>Вывод в консоль информации об игроке</summary>
+        /// <param name="controller">Конструктор игрока</param>
         private static void PrintPlayers(PlayerController controller)
         {
             foreach (var item in controller.Players())
@@ -102,7 +108,8 @@ namespace Players
                 Console.WriteLine($"Имя: {item.Name}, Сложность: {item.Difficult}, Класс: {item.Group.Name}, Здоровье: {item.Health}");
             }
         }
-
+        /// <summary>Добавление нового игрока в программу</summary>
+        /// <param name="controller">Конструктор игрока</param>
         private static void AddPlayer(PlayerController _player)
         {
             string _namePlayer, _idGroup, _difficult;
@@ -113,7 +120,7 @@ namespace Players
             _idGroup = Console.ReadLine();
             Console.WriteLine("Введите сложность для игрока:");
             _difficult = Console.ReadLine();
-
+            #region Проверки и разные опции
             if(string.IsNullOrWhiteSpace(_namePlayer))
             {
                 Console.WriteLine($"Игрок не может быть без имени");
@@ -153,22 +160,26 @@ namespace Players
                     Console.ResetColor();
                 }
             }
+            #endregion
         }
-
+        /// <summary>Удаление игрока из программы</summary>
+        /// <param name="controller">Конструктор игрока</param>
         private static void DelPlayer(PlayerController _players)
         {
             Console.WriteLine("Введите имя игрока:");
             string name = Console.ReadLine();
             _players.Remove(name);
         }
-
+        /// <summary>Добавление нового класса в программу</summary>
+        /// <param name="controller">Конструктор класса</param>
         private static void AddGroup(GroupController _groups)
         {
             Console.WriteLine("Введите название класса:");
             string name = Console.ReadLine();
             _groups.Add(name);
         }
-
+        /// <summary>Удаление класса из программы</summary>
+        /// <param name="controller">Конструктор класса</param>
         private static void DelGroup(GroupController _groups)
         {
             Console.WriteLine("Введите название группы:");

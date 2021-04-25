@@ -54,6 +54,7 @@ namespace Players
             Group = _group;
         }
         #endregion
+        /// <summary>Создание рандомной сложности</summary>
         public int RandomDiff()
         {
             Random random = new Random();
