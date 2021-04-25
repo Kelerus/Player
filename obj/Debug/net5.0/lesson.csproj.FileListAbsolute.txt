@@ -1,0 +1,16 @@
+/home/kelerus/Документы/lesson/obj/Debug/net5.0/lesson.csprojAssemblyReference.cache
+/home/kelerus/Документы/lesson/obj/Debug/net5.0/lesson.GeneratedMSBuildEditorConfig.editorconfig
+/home/kelerus/Документы/lesson/obj/Debug/net5.0/lesson.AssemblyInfoInputs.cache
+/home/kelerus/Документы/lesson/obj/Debug/net5.0/lesson.AssemblyInfo.cs
+/home/kelerus/Документы/lesson/obj/Debug/net5.0/lesson.csproj.CoreCompileInputs.cache
+/home/kelerus/Документы/lesson/bin/Debug/net5.0/lesson
+/home/kelerus/Документы/lesson/bin/Debug/net5.0/lesson.deps.json
+/home/kelerus/Документы/lesson/bin/Debug/net5.0/lesson.runtimeconfig.json
+/home/kelerus/Документы/lesson/bin/Debug/net5.0/lesson.runtimeconfig.dev.json
+/home/kelerus/Документы/lesson/bin/Debug/net5.0/lesson.dll
+/home/kelerus/Документы/lesson/bin/Debug/net5.0/ref/lesson.dll
+/home/kelerus/Документы/lesson/bin/Debug/net5.0/lesson.pdb
+/home/kelerus/Документы/lesson/obj/Debug/net5.0/lesson.dll
+/home/kelerus/Документы/lesson/obj/Debug/net5.0/ref/lesson.dll
+/home/kelerus/Документы/lesson/obj/Debug/net5.0/lesson.pdb
+/home/kelerus/Документы/lesson/obj/Debug/net5.0/lesson.genruntimeconfig.cache

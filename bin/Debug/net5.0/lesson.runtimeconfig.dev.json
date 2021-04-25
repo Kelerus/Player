@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/home/kelerus/.dotnet/store/|arch|/|tfm|",
+      "/home/kelerus/.nuget/packages"
+    ]
+  }
+}
