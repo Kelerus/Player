@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "XsOa1Cbuz01ONoWgj71WfxkB1+eKWahmYOmkY2F4VSj3toEoV7+UYKRQRaCMzIH2pe4jRhlmaVbUXeRhBXJpAw==",
+  "dgSpecHash": "wdCbmVUBnMENE8HeHUL2nEhUgkPJVl+nAu0XQMdeH6qWWpIey2536AYombcXOLiwk5XHQnqAS1fhKPbdHWBKcA==",
   "success": true,
   "projectFilePath": "/home/kelerus/Документы/lesson/lesson.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/kelerus/.nuget/packages/microsoft.netcore.app.runtime.win-x64/5.0.5/microsoft.netcore.app.runtime.win-x64.5.0.5.nupkg.sha512",
+    "/home/kelerus/.nuget/packages/microsoft.aspnetcore.app.runtime.win-x64/5.0.5/microsoft.aspnetcore.app.runtime.win-x64.5.0.5.nupkg.sha512",
+    "/home/kelerus/.nuget/packages/microsoft.netcore.app.host.win-x64/5.0.5/microsoft.netcore.app.host.win-x64.5.0.5.nupkg.sha512"
+  ],
   "logs": []
 }
